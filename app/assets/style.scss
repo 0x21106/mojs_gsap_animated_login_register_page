@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(45deg, #21252b, #4d5664);
+  color: whitesmoke;
+  font-family: "Poppins";
+}
+
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color:#21252B;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 9999;
+}
+
+.hella-input {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2)
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility:hidden;
+  #app-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction:row;
+
+    #blob-wave-slider {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -50%;
+      display: flex;
+      .view {
+        flex: 0 0 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 2% 4%;
+        .view-title {
+          display:block;
+          width: 50%;
+          font-weight: 900;
+          font-size: 3.5em;
+        }
+        .view-description {
+          display:block;
+          width: 40%;
+          font-weight: 900;
+          font-size: 1.5em;
+        }
+        .blob-canvas {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top:0;
+          left:0;
+          z-index: -1;
+          canvas {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left:0;
+          }
+        }
+        &.register-view {
+          left: -50%;
+        }
+        &.login-view {
+          canvas#blob-wave-left {
+            transform: rotateY(180deg);
+          }
+          padding: 2%;
+          left: -50%;
+          .view-title {
+            width: 100%;
+            font-size: 3em;
+            text-align:right;
+          }
+          .view-description {
+            width: 100%;
+            text-align:right;
+          }
+        }
+      }
+    }
+
+    #form-area {
+      width: 100%;
+      height: 100%;
+      display:flex;
+      .form-view {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        .form-view-form {
+          width: 80%;
+          &.login-form {
+            width: 60%;
+            display:none;
+          }
+          .form-view-changer {
+            width: auto;
+            height: 30px;
+            display:inline-block;
+          }
+        }
+        
+        .form-view-title {
+          font-weight: 900;
+          color:whitesmoke;
+          mix-blend-mode: exclusion;
+          text-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+  }
+}
+
+#projector {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%)
+}
+

@@ -1,0 +1,148 @@
+<html lang="en" class="hella-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <link rel="stylesheet" href="./assets/hella-inputs/hella.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="module" src="./assets/splitText.js"></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <div id="projector">
+        <div id="foot"></div>
+        <div id="light"></div>
+        <div id="body"></div>
+        <div id="belt-system"></div>
+        <div id="left-wheel"></div>
+        <div id="right-wheel"></div>
+      </div>
+    </div>
+
+    <div id="app">
+      <div id="app-content">
+        <div id="blob-wave-slider">
+          <div class="view login-view">
+            <h1 class="view-title">Welcome Back!</h1>
+            <span class="view-description"
+              >To login, fill in all the information correctly</span
+            >
+            <div class="blob-canvas">
+              <canvas id="blob-wave-left"></canvas>
+            </div>
+          </div>
+          <div class="view register-view">
+            <h1 class="view-title">Hi There!</h1>
+            <span class="view-description"
+              >To register, fill in all the information correctly</span
+            >
+            <div class="blob-canvas">
+              <canvas id="blob-wave-right"></canvas>
+            </div>
+          </div>
+        </div>
+        <div id="form-area">
+          <div class="form-view login-view">
+            <form class="form-view-form login-form">
+              <h1 class="form-view-title text-center">LOGIN</h1>
+              <input type="hidden" name="login" />
+              <input
+                type="email"
+                data-hella-prefix="fas fa-envelope-open-text"
+                name="email"
+                class="hella-input"
+                data-hella-placeholder="Email"
+              />
+              <input
+                type="password"
+                data-hella-prefix="fas fa-pencil-alt"
+                name="password"
+                data-hella-password-toggle="true"
+                class="hella-input"
+                data-hella-placeholder="Password"
+              />
+              <input
+                type="button"
+                value="LOGIN"
+                class="hella-input hella-effective-3d"
+              />
+              <input
+                type="button"
+                id="change-to-register-view"
+                class="form-view-changer hella-input hella-effective-3d"
+                value="Register"
+              />
+            </form>
+          </div>
+          <div class="form-view register-view">
+            <form class="form-view-form register-form">
+              <h1 class="form-view-title text-center">REGISTER</h1>
+              <input type="hidden" name="register" />
+              <input
+                type="text"
+                data-hella-prefix="fas fa-user"
+                name="username"
+                class="hella-input"
+                data-hella-placeholder="Username"
+              />
+              <input
+                type="email"
+                data-hella-prefix="fas fa-envelope-open-text"
+                name="email"
+                class="hella-input"
+                data-hella-placeholder="Email"
+              />
+              <input
+                type="password"
+                data-hella-prefix="fas fa-pencil-alt"
+                name="password"
+                data-hella-password-toggle="true"
+                class="hella-input"
+                data-hella-placeholder="Password"
+              />
+              <input
+                type="password"
+                data-hella-prefix="fas fa-pencil-alt"
+                name="password_again"
+                data-hella-password-toggle="true"
+                class="hella-input"
+                data-hella-placeholder="Password Again"
+              />
+              <input
+                type="button"
+                class="hella-input hella-effective-3d"
+                value="REGISTER"
+              />
+              <input
+                type="button"
+                id="change-to-login-view"
+                class="form-view-changer hella-input hella-effective-3d"
+                value="Login"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/moJS/mo.min.js"></script>
+    <script src="./assets/blob.js"></script>
+    <script type="module" src="./assets/hella-inputs/hella.js"></script>
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>
